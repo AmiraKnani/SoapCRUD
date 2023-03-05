@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="CamionImpService" targetNamespace="http://service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://service/" schemaLocation="camionimp_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="findCamionById">
+    <wsdl:part name="parameters" element="tns:findCamionById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllCamions">
+    <wsdl:part name="parameters" element="tns:getAllCamions">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCamionById">
+    <wsdl:part name="parameters" element="tns:updateCamionById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteCamionById">
+    <wsdl:part name="parameters" element="tns:deleteCamionById">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCamionByIdResponse">
+    <wsdl:part name="parameters" element="tns:updateCamionByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addCamion">
+    <wsdl:part name="parameters" element="tns:addCamion">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addCamionResponse">
+    <wsdl:part name="parameters" element="tns:addCamionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAllCamionsResponse">
+    <wsdl:part name="parameters" element="tns:getAllCamionsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteCamionByIdResponse">
+    <wsdl:part name="parameters" element="tns:deleteCamionByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCamionByIdResponse">
+    <wsdl:part name="parameters" element="tns:findCamionByIdResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CamionImp">
+    <wsdl:operation name="findCamionById">
+      <wsdl:input name="findCamionById" message="tns:findCamionById">
+    </wsdl:input>
+      <wsdl:output name="findCamionByIdResponse" message="tns:findCamionByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCamions">
+      <wsdl:input name="getAllCamions" message="tns:getAllCamions">
+    </wsdl:input>
+      <wsdl:output name="getAllCamionsResponse" message="tns:getAllCamionsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCamion">
+      <wsdl:input name="addCamion" message="tns:addCamion">
+    </wsdl:input>
+      <wsdl:output name="addCamionResponse" message="tns:addCamionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCamionById">
+      <wsdl:input name="updateCamionById" message="tns:updateCamionById">
+    </wsdl:input>
+      <wsdl:output name="updateCamionByIdResponse" message="tns:updateCamionByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCamionById">
+      <wsdl:input name="deleteCamionById" message="tns:deleteCamionById">
+    </wsdl:input>
+      <wsdl:output name="deleteCamionByIdResponse" message="tns:deleteCamionByIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CamionImpServiceSoapBinding" type="tns:CamionImp">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="findCamionById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCamionById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCamionByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCamions">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAllCamions">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAllCamionsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addCamion">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addCamion">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addCamionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCamionById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCamionById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCamionByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCamionById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deleteCamionById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="deleteCamionByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CamionImpService">
+    <wsdl:port name="CamionImpPort" binding="tns:CamionImpServiceSoapBinding">
+      <soap:address location="http://localhost:8002/ProjectSoap/services/CamionImpPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

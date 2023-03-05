@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://service/" version="1.0">
+<xs:element name="addCamion" type="tns:addCamion"/>
+<xs:element name="addCamionResponse" type="tns:addCamionResponse"/>
+<xs:element name="deleteCamionById" type="tns:deleteCamionById"/>
+<xs:element name="deleteCamionByIdResponse" type="tns:deleteCamionByIdResponse"/>
+<xs:element name="findCamionById" type="tns:findCamionById"/>
+<xs:element name="findCamionByIdResponse" type="tns:findCamionByIdResponse"/>
+<xs:element name="getAllCamions" type="tns:getAllCamions"/>
+<xs:element name="getAllCamionsResponse" type="tns:getAllCamionsResponse"/>
+<xs:element name="updateCamionById" type="tns:updateCamionById"/>
+<xs:element name="updateCamionByIdResponse" type="tns:updateCamionByIdResponse"/>
+<xs:complexType name="findCamionById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="findCamionByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:camion"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="camion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categorie" type="xs:string"/>
+      <xs:element name="distance" type="xs:float"/>
+      <xs:element name="matricule" type="xs:int"/>
+      <xs:element name="poid" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllCamions">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllCamionsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:camion"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addCamion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:camion"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addCamionResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="updateCamionById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="tns:camion"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateCamionByIdResponse">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="deleteCamionById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteCamionByIdResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
